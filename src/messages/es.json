@@ -77,6 +77,12 @@
     "notFoundTitle": "Pagina no encontrada",
     "notFoundDescription": "La pagina que buscas no existe o ha sido movida."
   },
+  "cta": {
+    "title": "Abierto a oportunidades",
+    "description": "Si tienes un proyecto interesante o simplemente quieres conectar, escribeme.",
+    "sendEmail": "Enviar correo",
+    "downloadCV": "Descargar CV"
+  },
   "footer": {
     "craftedWith": "HECHO CON CUIDADO POR JQ"
   },

@@ -12,6 +12,7 @@ export const USER: User = {
     "Software Developer",
     "Full Stack Developer",
     "Problem Solver",
+    "Hackathon Winner",
   ],
   address: "La Paz, Bolivia",
   phoneNumberB64: "KzU5MTc2MjYxNjUz",
@@ -27,9 +28,11 @@ export const USER: User = {
     },
   ],
   about: `
-- Ingeniero en Sistemas y Full-Stack Developer con experiencia en Flutter, Angular, React y Node.js.
-- He desarrollado sistemas administrativos, microservicios y aplicaciones moviles para instituciones gubernamentales y educativas.
-- Participante activo en hackathons y comunidades tech. Apasionado por crear soluciones tecnologicas innovadoras que generen impacto real.
+Software Developer boliviano que construye productos donde la tecnologia resuelve problemas reales. He trabajado en gobierno (MEFP, UMSA), startups (Bucle Ventures, Certivo) y soy ganador del **Innovahack 2025** — la hackathon mas grande de Bolivia.
+
+Mi enfoque no es solo escribir codigo: diseno experiencias que combinan **Flutter**, **Angular**, **React** y **Node.js** con inteligencia artificial para crear soluciones que antes parecian imposibles. Desde sistemas administrativos para instituciones publicas hasta apps de colorimetria capilar con sugerencias generadas por IA.
+
+Creo que el mejor software nace de entender el problema antes de teclear la primera linea. Por eso cada proyecto que entrego tiene contexto, proceso y resultado medible.
 `,
   avatar:
     "https://media.licdn.com/dms/image/v2/D4E03AQFSbogGCwiBqQ/profile-displayphoto-shrink_400_400/B4EZT4ebEmHgAg-/0/1739335512921?e=1782950400&v=beta&t=SDZVYmBu_myuOgQvBmm2XSYQDsP3kNqXF2uFpetkJbM",
@@ -57,6 +60,7 @@ export const USER: User = {
     "spring boot",
     "flutter",
     "bolivia",
+    "innovahack 2025",
   ],
   dateCreated: "2025-01-01",
 }
