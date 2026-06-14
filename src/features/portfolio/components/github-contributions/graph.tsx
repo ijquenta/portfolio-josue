@@ -2,7 +2,7 @@
 
 import { use } from "react"
 import { format } from "date-fns"
-import { LoaderIcon } from "lucide-react"
+import { LoaderIcon } from "@animateicons/react/lucide"
 
 import {
   Tooltip,

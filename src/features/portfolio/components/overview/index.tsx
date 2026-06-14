@@ -1,13 +1,13 @@
 "use client"
 
 import { urlToName } from "@/utils/url"
+import { NonBinaryIcon } from "lucide-react"
 import {
   LinkIcon,
   MapPinIcon,
   MarsIcon,
-  NonBinaryIcon,
   VenusIcon,
-} from "lucide-react"
+} from "@animateicons/react/lucide"
 
 import { USER } from "@/features/portfolio/data/user"
 import type { User } from "@/features/portfolio/types/user"

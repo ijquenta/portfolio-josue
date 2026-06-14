@@ -3,8 +3,9 @@
     "home": "Inicio",
     "components": "Componentes",
     "blocks": "Bloques",
-    "blog": "Blog",
-    "sponsors": "Patrocinadores",
+    "about": "Sobre mi",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
     "testimonials": "Testimonios"
   },
   "section": {

@@ -1,34 +1,66 @@
-import { Icons } from "@/components/icons"
+import {
+  siTypescript,
+  siJavascript,
+  siPython,
+  siDart,
+  siReact,
+  siNextdotjs,
+  siAngular,
+  siVuedotjs,
+  siFlutter,
+  siTailwindcss,
+  siShadcnui,
+  siBootstrap,
+  siPrimeng,
+  siNodedotjs,
+  siExpress,
+  siSpringboot,
+  siFlask,
+  siFastapi,
+  siFirebase,
+  siPostgresql,
+  siMysql,
+  siGit,
+  siDocker,
+  siLinux,
+  siGitlab,
+  siPostman,
+  siFigma,
+} from "simple-icons"
 
 import type { TechStack } from "../types/tech-stack"
+
+function siIcon(si: { path: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <path d={si.path} />
+    </svg>
+  )
+}
 
 export const TECH_STACK: TechStack[] = [
   {
     key: "typescript",
     title: "TypeScript",
     href: "https://www.typescriptlang.org",
-    icon: <Icons.ts />,
+    icon: siIcon(siTypescript),
+    color: siTypescript.hex,
     categories: ["Languages"],
   },
   {
     key: "js",
     title: "JavaScript",
     href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-    icon: <Icons.js />,
+    icon: siIcon(siJavascript),
+    color: siJavascript.hex,
     categories: ["Languages"],
   },
   {
     key: "python",
     title: "Python",
     href: "https://www.python.org",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <path
-          d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
+    icon: siIcon(siPython),
+    color: siPython.hex,
     categories: ["Languages"],
   },
   {
@@ -36,294 +68,211 @@ export const TECH_STACK: TechStack[] = [
     title: "Java",
     href: "https://www.java.com",
     icon: (
-      <svg viewBox="0 0 24 24" aria-hidden>
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden>
         <path
           d="M8.851 18.56s-.417.242.297.323c.844.099 1.275.085 2.203-.093 0 0 .244.153.585.285-2.078.891-4.649-.158-3.085-.515m-.19-1.47s-.467.346.246.42c.922.096 1.65.104 2.91-.141 0 0 .17.172.437.266-2.511.735-5.307-.177-3.593-.545m5.016 2.569s.543.448-1.336.794c-1.085.2-2.617.26-3.943.072 0 0 .47.39 2.468.521 1.784.118 4.062-.268 4.405-.872.375-.661-1.232-.883-1.594-.515m-4.432-3.532c.789.165 2.023.11 2.889-.067a10.4 10.4 0 0 0-1.534-.712c-.482-.197-.978-.395-1.49-.571-.355-.124-.679-.406-.258-.46.696-.089 1.295-.073 2.089-.06.531.009 1.085.031 1.693.1l.415.068c-1.416-.558-2.862-.93-4.224-.702-.802.135-1.755.374-1.69.917.057.466.492.63 1.11.767m4.299 2.434c.06.061.033.15-.062.174s-.175.059-.256.025c-.077-.032-.11-.108-.053-.164s.143-.069.235-.034.123.066.136 0zm-.887.126c0 .106-.163.193-.365.193s-.366-.087-.366-.193.163-.193.366-.193.365.086.365.193"
-          fill="currentColor"
         />
         <path
           d="M15.637 17.477c1.283-.136 2.04-.368 2.04-.368s-.374.422-1.866.619c-1.773.233-3.702.155-4.918.067 0 0 .421.281 2.257.444 1.342.119 3.4.03 4.895-.196.243-.037.373-.138.373-.138s-.144.222-.487.379c-1.425.636-4.301.614-5.69.479 0 0 .164.123.971.196 1.224.106 3.649.082 4.828-.215.398-.1.688-.209.688-.209s-.165.15-.465.303c-1.326.652-4.667.591-6.12.127 0 0 .307.326 1.444.481 1.358.186 3.526.13 4.536-.178.349-.107.574-.225.574-.225"
-          fill="currentColor"
         />
         <path
           d="M11.912 11.223c.436.951-.171 1.757-.171 1.757s1.105-.276 1.513-1.234c.388-.913.18-1.773.18-1.773s.805 1.577-.246 2.778c-1.463 1.682-2.692 1.24-2.692 1.24s-.077-.064-.202-.158c1.086-.36 1.77-.984 1.77-.984s-.898-.199-1.898-.299c-.885-.089-1.872-.119-2.19-.43.014-.006.066-.019.066-.019s1.84-.565 3.88.122m-2.503.672c.698.39 1.552.767 1.552.767s-.799.161-1.76.125c-.59-.023-1.298-.162-1.646-.348 0 0 .262.213 1.02.362.376.074.806.092 1.247.053.474-.042.924-.154 1.245-.276 0 0-.703.255-1.658.117z"
-          fill="currentColor"
         />
       </svg>
     ),
+    color: "007396",
     categories: ["Languages"],
   },
   {
     key: "dart",
     title: "Dart",
     href: "https://dart.dev",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <path
-          d="M4.105 8.986a.37.37 0 0 0-.371.371v6.127c0 .205.166.371.371.371h2.42v-4.52l4.017-4.017H5.193l-1.088 1.088v.58zm6.198 0-4.58 4.58v4.519h4.519l4.58-4.58V8.987h-4.519zm-.142 4.755c-.609.609-1.597.609-2.206 0s-.609-1.597 0-2.206c.609-.609 1.597-.609 2.206 0s.609 1.597 0 2.206zM4.105 19.811a.37.37 0 0 1-.371-.371v-1.784h2.791v2.155H4.105zM20.266 4.105a.37.37 0 0 1 .371.371v1.784h-2.791V4.105h2.42zm-16.161 0 7.296 7.296-.028 7.254H20.1l3.759-3.759V4.105H4.105z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
+    icon: siIcon(siDart),
+    color: siDart.hex,
     categories: ["Languages"],
   },
   {
     key: "react",
     title: "React",
     href: "https://react.dev",
-    icon: <Icons.react />,
+    icon: siIcon(siReact),
+    color: siReact.hex,
     categories: ["Frontend"],
   },
   {
     key: "nextjs",
     title: "Next.js",
     href: "https://nextjs.org",
-    icon: <Icons.ts />,
+    icon: siIcon(siNextdotjs),
+    color: siNextdotjs.hex,
     categories: ["Frontend"],
   },
   {
     key: "angular",
     title: "Angular",
     href: "https://angular.dev",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <path
-          d="M9.93 12.645h4.134L11.996 7.74M11.996.009L.686 3.988l1.725 14.76 9.585 5.243 9.588-5.244L23.308 3.99 11.996.01zm7.058 18.297h-2.636l-1.42-3.501H8.995l-1.42 3.501H4.937l7.06-15.648 7.057 15.648z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
+    icon: siIcon(siAngular),
+    color: siAngular.hex,
     categories: ["Frontend"],
   },
   {
     key: "vuejs",
     title: "Vue.js",
     href: "https://vuejs.org",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <path
-          d="M24 1.61H14.06L12 5.16 9.94 1.61H0l12 20.78ZM12 14.08 5.16 2.23H9.59L12 6.41l2.41-4.18h4.43Z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
+    icon: siIcon(siVuedotjs),
+    color: siVuedotjs.hex,
     categories: ["Frontend"],
   },
   {
     key: "flutter",
     title: "Flutter",
     href: "https://flutter.dev",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <path
-          d="M14.314 0L2.3 12.002l4.159 4.16L22.63 0Zm-3.676 11.461-4.16 4.16 4.16 4.16 4.16-4.16Z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
+    icon: siIcon(siFlutter),
+    color: siFlutter.hex,
     categories: ["Frontend"],
   },
   {
     key: "tailwindcss",
     title: "Tailwind CSS",
     href: "https://tailwindcss.com",
-    icon: <Icons.tailwindcss />,
+    icon: siIcon(siTailwindcss),
+    color: siTailwindcss.hex,
     categories: ["Frontend"],
   },
   {
     key: "shadcn-ui",
     title: "shadcn/ui",
     href: "https://ui.shadcn.com",
-    icon: <Icons.shadcn />,
+    icon: siIcon(siShadcnui),
+    color: siShadcnui.hex,
     categories: ["Frontend"],
   },
   {
     key: "bootstrap",
     title: "Bootstrap",
     href: "https://getbootstrap.com",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <path
-          d="M11.77 11.24H9.956V8.202h2.15c1.17 0 1.834.522 1.834 1.466 0 1.008-.63 1.572-2.17 1.572zm.324 1.206H9.957v3.348h2.231c1.459 0 2.232-.585 2.232-1.685s-.795-1.663-2.326-1.663zM24 5.455v13.09A5.455 5.455 0 0 1 18.545 24H5.455A5.455 5.455 0 0 1 0 18.545V5.455A5.455 5.455 0 0 1 5.455 0h13.09A5.455 5.455 0 0 1 24 5.455zm-8.38 7.406c0-1.304-.728-2.154-1.79-2.35 1.036-.287 1.69-1.07 1.69-2.115 0-1.428-1.073-2.361-3.01-2.361H7.447v10.898h4.923c2.244 0 3.714-.972 3.714-2.664 0-1.232-.768-2.09-1.824-2.35l.36-.058z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
+    icon: siIcon(siBootstrap),
+    color: siBootstrap.hex,
     categories: ["Frontend"],
   },
   {
     key: "primeng",
     title: "PrimeNG",
     href: "https://primeng.org",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <path
-          d="M12 0 1.5 6v12l10.5 6 10.5-6V6Zm0 1.5 9 5.15v10.7l-9 5.15-9-5.15V6.65Z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
+    icon: siIcon(siPrimeng),
+    color: siPrimeng.hex,
     categories: ["Frontend"],
   },
   {
     key: "nodejs",
     title: "Node.js",
     href: "https://nodejs.org",
-    icon: <Icons.ts />,
+    icon: siIcon(siNodedotjs),
+    color: siNodedotjs.hex,
     categories: ["Backend & Database"],
   },
   {
     key: "express",
     title: "Express",
     href: "https://expressjs.com",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <path
-          d="M12 0 1.5 6v12l10.5 6 10.5-6V6ZM4.5 7.5 12 3l7.5 4.5v9L12 21l-7.5-4.5Z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
+    icon: siIcon(siExpress),
+    color: siExpress.hex,
     categories: ["Backend & Database"],
   },
   {
     key: "spring-boot",
     title: "Spring Boot",
     href: "https://spring.io/projects/spring-boot",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <path
-          d="M20.205 16.392c-2.47 0-4.066-1.54-4.066-4.235 0-2.585 1.596-5.89 4.066-5.89 2.47 0 4.066 3.305 4.066 5.89 0 2.695-1.596 4.235-4.066 4.235zm-5.134 5.23c-2.962 0-5.133-2.09-5.133-5.213 0-3.007 2.17-6.156 5.133-6.156s5.133 3.149 5.133 6.156c0 3.123-2.17 5.213-5.133 5.213zM9.564 6.05c-2.97 0-5.15-2.09-5.15-5.213 0-3.007 2.18-6.156 5.15-6.156s5.133 3.149 5.133 6.156c0 3.123-2.164 5.213-5.133 5.213z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
+    icon: siIcon(siSpringboot),
+    color: siSpringboot.hex,
     categories: ["Backend & Database"],
   },
   {
     key: "flask",
     title: "Flask",
     href: "https://flask.palletsprojects.com",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <path
-          d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
+    icon: siIcon(siFlask),
+    color: siFlask.hex,
     categories: ["Backend & Database"],
   },
   {
     key: "fastapi",
     title: "FastAPI",
     href: "https://fastapi.tiangolo.com",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <path
-          d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.5 12-6 10V13H7.5l4-10v5h6Z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
+    icon: siIcon(siFastapi),
+    color: siFastapi.hex,
     categories: ["Backend & Database"],
   },
   {
     key: "firebase",
     title: "Firebase",
     href: "https://firebase.google.com",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <path
-          d="M3.89 15.67 6.59 2.53c.2-.88.89-1.53 1.78-1.53h5.26c.89 0 1.58.65 1.78 1.53l2.7 13.14c-.2-.02-.4-.04-.62-.04H4.49c-.2 0-.4.02-.6.04zM20.11 21.47l-5.1-9.93c-.22-.45-.05-.99.42-1.2.46-.22 1.02-.03 1.2.42l5.1 9.93c.05.11.08.22.08.33 0 .47-.39.86-.86.86H3.86c-.38 0-.72-.24-.84-.6-.2-.54.06-1.12.6-1.32L13.1 14c.46-.2 1.02-.03 1.22.44l4.36 9.2c.07.14.1.29.1.44 0 .47-.39.86-.86.86h-.08z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
+    icon: siIcon(siFirebase),
+    color: siFirebase.hex,
     categories: ["Backend & Database"],
   },
   {
     key: "postgresql",
     title: "PostgreSQL",
     href: "https://www.postgresql.org",
-    icon: <Icons.ts />,
+    icon: siIcon(siPostgresql),
+    color: siPostgresql.hex,
     categories: ["Backend & Database"],
   },
   {
     key: "mysql",
     title: "MySQL",
     href: "https://www.mysql.com",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <path
-          d="M16.43 10.25c-.94 0-1.72.33-2.34.99-.23.24-.43.5-.6.79-.05.1-.1.2-.14.3h-3.1c-.04-.1-.09-.2-.14-.3-.17-.29-.37-.55-.6-.79-.62-.66-1.4-.99-2.34-.99-.94 0-1.72.33-2.34.99-.62.66-.93 1.56-.93 2.7 0 1.14.31 2.04.93 2.7.62.66 1.4.99 2.34.99.94 0 1.72-.33 2.34-.99.23-.24.43-.5.6-.79.05-.1.1-.2.14-.3h3.1c.04.1.09.2.14.3.17.29.37.55.6.79.62.66 1.4.99 2.34.99.94 0 1.72-.33 2.34-.99.62-.66.93-1.56.93-2.7 0-1.14-.31-2.04-.93-2.7-.62-.66-1.4-.99-2.34-.99zM7.1 14.43c-.57 0-1.03-.2-1.37-.6-.34-.4-.51-.94-.51-1.62 0-.68.17-1.22.51-1.62.34-.4.8-.6 1.37-.6.57 0 1.03.2 1.37.6.34.4.51.94.51 1.62 0 .68-.17 1.22-.51 1.62-.34.4-.8.6-1.37.6zm5.35-2.5c-.12.28-.29.53-.51.74-.23.22-.49.4-.78.53.29.13.55.31.78.53.22.21.39.46.51.74H11.8c-.12-.28-.29-.53-.51-.74-.23-.22-.49-.4-.78-.53.29-.13.55-.31.78-.53.22-.21.39-.46.51-.74h.65zm5.35 2.5c-.57 0-1.03-.2-1.37-.6-.34-.4-.51-.94-.51-1.62 0-.68.17-1.22.51-1.62.34-.4.8-.6 1.37-.6.57 0 1.03.2 1.37.6.34.4.51.94.51 1.62 0 .68-.17 1.22-.51 1.62-.34.4-.8.6-1.37.6z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
+    icon: siIcon(siMysql),
+    color: siMysql.hex,
     categories: ["Backend & Database"],
   },
   {
     key: "git",
     title: "Git",
     href: "https://git-scm.com",
-    icon: <Icons.ts />,
+    icon: siIcon(siGit),
+    color: siGit.hex,
     categories: ["Dev Tools & AI"],
   },
   {
     key: "docker",
     title: "Docker",
     href: "https://www.docker.com",
-    icon: <Icons.ts />,
+    icon: siIcon(siDocker),
+    color: siDocker.hex,
     categories: ["Dev Tools & AI"],
   },
   {
     key: "linux",
     title: "Linux",
     href: "https://www.linux.org",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <path
-          d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
+    icon: siIcon(siLinux),
+    color: siLinux.hex,
     categories: ["Dev Tools & AI"],
   },
   {
     key: "gitlab",
     title: "GitLab",
     href: "https://gitlab.com",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <path
-          d="m23.6 9.6-.1-.3-3.3-10c-.2-.5-.8-.8-1.3-.6-.2.1-.3.2-.4.4l-2.2 6.7H7.6L5.4-.3c-.2-.5-.8-.8-1.3-.6-.2.1-.3.2-.4.4L.5 9.3l-.1.3c-.4 1.3-.1 2.7.9 3.7l.1.1 6.6 4.9 3.3 2.5 2 1.5c.3.2.7.2 1 0l2-1.5 3.3-2.5 6.7-5 .1-.1c.9-.9 1.2-2.4.7-3.7z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
+    icon: siIcon(siGitlab),
+    color: siGitlab.hex,
     categories: ["Dev Tools & AI"],
   },
   {
     key: "postman",
     title: "Postman",
     href: "https://www.postman.com",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <path
-          d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
+    icon: siIcon(siPostman),
+    color: siPostman.hex,
     categories: ["Dev Tools & AI"],
   },
   {
     key: "figma",
     title: "Figma",
     href: "https://www.figma.com",
-    icon: <Icons.ts />,
+    icon: siIcon(siFigma),
+    color: siFigma.hex,
     categories: ["Design"],
   },
 ]

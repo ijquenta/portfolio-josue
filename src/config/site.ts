@@ -23,12 +23,16 @@ export const META_THEME_COLORS = {
 
 export const MAIN_NAV: NavItem<Route>[] = [
   {
-    title: "Blog",
-    href: "/blog",
+    title: "About",
+    href: "/#hello",
   },
   {
-    title: "Sponsors",
-    href: "/sponsors",
+    title: "Experience",
+    href: "/#experience",
+  },
+  {
+    title: "Projects",
+    href: "/#projects",
   },
 ]
 

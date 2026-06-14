@@ -4,7 +4,7 @@ import { useId } from "react"
 import { copyToClipboardWithEvent } from "@/utils/copy"
 import { decodePhoneNumber, formatPhoneNumber } from "@/utils/string"
 import { useTiks } from "@rexa-developer/tiks/react"
-import { PhoneIcon } from "lucide-react"
+import { PhoneIcon } from "@animateicons/react/lucide"
 import { useHotkeys } from "react-hotkeys-hook"
 import { toast } from "sonner"
 

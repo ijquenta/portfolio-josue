@@ -1,5 +1,6 @@
 import { addQueryParams } from "@/utils/url"
-import { BriefcaseBusinessIcon, CodeXmlIcon, LightbulbIcon } from "lucide-react"
+import { BriefcaseBusinessIcon, LightbulbIcon } from "lucide-react"
+import { CodeXmlIcon } from "@animateicons/react/lucide"
 
 import { UTM_PARAMS } from "@/config/site"
 

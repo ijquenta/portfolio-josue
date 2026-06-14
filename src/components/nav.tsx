@@ -1,9 +1,19 @@
+"use client"
+
 import React from "react"
 import type { Route } from "next"
 import Link from "next/link"
 
 import type { NavItem } from "@/types/nav"
+import { useTranslation, type TranslationKey } from "@/lib/i18n/use-translation"
 import { cn } from "@/lib/utils"
+
+const NAV_KEY_MAP: Record<string, TranslationKey> = {
+  "/": "nav.home",
+  "/#hello": "nav.about",
+  "/#experience": "nav.experience",
+  "/#projects": "nav.projects",
+}
 
 export function Nav({
   items,
@@ -16,12 +26,14 @@ export function Nav({
   className?: string
   exactMatch?: boolean
 }) {
+  const { t } = useTranslation()
+
   return (
     <nav
       data-active-id={activeId}
       className={cn("flex items-center gap-4", className)}
     >
-      {items.map(({ title, href }) => {
+      {items.map(({ href }) => {
         const isActive = exactMatch
           ? activeId === href
           : activeId === href ||
@@ -35,7 +47,7 @@ export function Nav({
             href={href}
             aria-current={isActive ? "page" : undefined}
           >
-            {title}
+            {t(NAV_KEY_MAP[href])}
           </NavItem>
         )
       })}

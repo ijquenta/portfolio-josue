@@ -37,6 +37,20 @@ export const CERTIFICATIONS: Certification[] = [
     credentialURL: "#",
   },
   {
+    title: "Curso de Flutter",
+    issuer: "Platzi",
+    issueDate: "2025",
+    credentialID: "a6dd66f2-fdc3-44d6-9eda-f79ac4c8f34d",
+    credentialURL: "#",
+  },
+  {
+    title: "Firebase y Flutter puedes usarlo",
+    issuer: "Platzi",
+    issueDate: "2025",
+    credentialID: "",
+    credentialURL: "#",
+  },
+  {
     title: "Taller Introduccion a Flutter",
     issuer: "UMSA",
     issueDate: "",

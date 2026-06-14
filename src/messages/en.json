@@ -3,8 +3,9 @@
     "home": "Home",
     "components": "Components",
     "blocks": "Blocks",
-    "blog": "Blog",
-    "sponsors": "Sponsors",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
     "testimonials": "Testimonials"
   },
   "section": {

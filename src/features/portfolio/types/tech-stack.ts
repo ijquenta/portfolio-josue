@@ -3,5 +3,6 @@ export type TechStack = {
   title: string
   href: string
   icon: React.ReactElement
+  color: string
   categories: string[]
 }

@@ -61,7 +61,8 @@ export function TechStack() {
                           href={item.href}
                           target="_blank"
                           rel="noopener"
-                          className="flex h-(--badge-height) items-center justify-center gap-1.5 rounded-md bg-zinc-50/80 px-1.75 font-mono text-xs text-foreground inset-ring-1 inset-ring-border dark:bg-zinc-900/80 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 [&_svg]:text-muted-foreground/80"
+                          className="flex h-(--badge-height) items-center justify-center gap-1.5 rounded-md bg-zinc-50/80 px-1.75 font-mono text-xs text-foreground inset-ring-1 inset-ring-border transition-[color_background] duration-200 dark:bg-zinc-900/80 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 [&_svg]:text-muted-foreground/80 [&_svg]:transition-[color] [&_svg]:duration-200 hover:[&_svg]:text-[var(--brand)]"
+                          style={{ "--brand": `#${item.color}` } as React.CSSProperties}
                         >
                           {item.icon}
                           {item.title}

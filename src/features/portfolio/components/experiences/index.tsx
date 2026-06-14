@@ -1,4 +1,4 @@
-import { ChevronDownIcon } from "lucide-react"
+import { ChevronDownIcon } from "@animateicons/react/lucide"
 
 import { Button } from "@/components/base/ui/button"
 import {

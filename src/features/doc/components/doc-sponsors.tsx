@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { addQueryParams } from "@/utils/url"
-import { XIcon } from "lucide-react"
+import { XIcon } from "@animateicons/react/lucide"
 
 import { UTM_PARAMS } from "@/config/site"
 import { trackEvent } from "@/lib/events"

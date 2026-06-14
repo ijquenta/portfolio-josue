@@ -1,5 +1,6 @@
 import { format } from "date-fns"
-import { Crown, Paperclip } from "lucide-react"
+import { Crown } from "lucide-react"
+import { PaperclipIcon } from "@animateicons/react/lucide"
 
 import { cn } from "@/lib/utils"
 import { Separator } from "@/components/ui/separator"
@@ -93,7 +94,7 @@ export function AwardItem({
                       rel="noopener"
                       aria-label="Open Reference Attachment"
                     >
-                      <Paperclip />
+                      <PaperclipIcon />
                     </a>
                   }
                 />

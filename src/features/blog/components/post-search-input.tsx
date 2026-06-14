@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect } from "react"
-import { XIcon } from "lucide-react"
+import { XIcon } from "@animateicons/react/lucide"
 import { useHotkeys } from "react-hotkeys-hook"
 
 import { trackEvent } from "@/lib/events"

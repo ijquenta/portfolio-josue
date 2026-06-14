@@ -1,7 +1,5 @@
-import {
-  CodeXmlIcon,
-  GraduationCapIcon,
-} from "lucide-react"
+import { GraduationCapIcon } from "lucide-react"
+import { CodeXmlIcon } from "@animateicons/react/lucide"
 
 import type { Experience } from "../types/experiences"
 
@@ -37,47 +35,29 @@ export const EXPERIENCES: Experience[] = [
   },
   {
     id: "bucle-venture",
-    companyName: "Bucle Venture",
+    companyName: "Bucle Ventures",
     companyWebsite: "#",
     positions: [
-      {
-        id: "2",
-        title: "Full Stack Developer",
-        employmentPeriod: {
-          start: "04.2025",
-          end: "06.2025",
-        },
-        employmentType: "Full-time",
-        icon: <CodeXmlIcon />,
-        description:
-          "- Desarrollo de una plataforma unificada de componentes y herramientas utilizando Flutter (extension de LinkedIn), Node.js, Express y Firebase para acelerar la entrega de productos.\n- Creacion de un perfil de LinkedIn y una herramienta de analisis y optimizacion de CV como extension de Flutter.\n- Diseno e implementacion de soluciones backend para analisis de datos y mejora de perfiles de LinkedIn.",
-        skills: [
-          "Flutter",
-          "Dart",
-          "Node.js",
-          "Express",
-          "Firebase",
-          "TypeScript",
-        ],
-      },
       {
         id: "1",
         title: "Junior Product Developer",
         employmentPeriod: {
           start: "01.2025",
-          end: "03.2025",
+          end: "09.2025",
         },
         employmentType: "Full-time",
         icon: <CodeXmlIcon />,
         description:
-          "- Desarrollo de aplicaciones ChatBot en WhatsApp utilizando FastAPI y aplicaciones web con React.\n- Implementacion de soluciones backend para el procesamiento de mensajes.\n- Colaboracion en el desarrollo de interfaces de usuario responsivas.",
+          "- Participacion activa en el desarrollo de productos innovadores, aplicando metodologias agiles para garantizar entregas eficientes y de alta calidad.\n- Colaboracion estrecha con equipos multidisciplinarios en el diseno, implementacion y prueba de nuevas funcionalidades.\n- Desarrollo de aplicaciones ChatBot en WhatsApp utilizando FastAPI y aplicaciones web con React.\n- Compromiso con la mejora continua y la excelencia en el desarrollo de software.",
         skills: [
+          "Node.js",
+          "Google Cloud",
           "FastAPI",
           "Python",
           "React",
           "TypeScript",
-          "Node.js",
         ],
+        isExpanded: true,
       },
     ],
   },
@@ -88,17 +68,18 @@ export const EXPERIENCES: Experience[] = [
     positions: [
       {
         id: "1",
-        title: "Software Developer (Internship)",
+        title: "QA jr",
         employmentPeriod: {
-          start: "07.2024",
+          start: "09.2024",
           end: "12.2024",
         },
-        employmentType: "Internship",
+        employmentType: "Full-time",
         icon: <CodeXmlIcon />,
         description:
-          "- Gestion bajo la metodologia SCRUM.\n- Implementacion del sitio web de documentacion para JasperReport en el modulo de formularios del sistema.\n- Ejecucion de pruebas funcionales para asegurar la calidad de los sistemas de informacion.\n- Participacion en capacitaciones y evaluaciones impartidas por las unidades correspondientes.",
+          "- Desarrollo de microservicios para un sistema de informacion enfocado en el seguimiento de actividades y gestion de proyectos bajo la metodologia SCRUM.\n- Implementacion del sitio web de documentacion para JasperReport en el modulo de formularios del sistema, mejorando la accesibilidad y usabilidad.\n- Realizacion de pruebas funcionales exhaustivas para garantizar la calidad y estabilidad del sistema de informacion, contribuyendo a la entrega de un producto robusto y confiable.",
         skills: [
           "SCRUM",
+          "Microservices",
           "JasperReport",
           "Documentation",
           "Functional Testing",
@@ -113,15 +94,15 @@ export const EXPERIENCES: Experience[] = [
     positions: [
       {
         id: "1",
-        title: "Full Stack Developer (Work Scholarship)",
+        title: "Desarrollador de software",
         employmentPeriod: {
           start: "02.2023",
           end: "12.2023",
         },
-        employmentType: "Part-time",
+        employmentType: "Full-time",
         icon: <CodeXmlIcon />,
         description:
-          "- Desarrollo y mantenimiento de modulos y sistemas administrativos, calculo de liquidaciones, beneficios sociales y sistema de recursos humanos.\n- Soporte en linea para sistemas de informacion.\n- Creacion de manuales tecnicos, de usuario y de programacion.\n- Formacion dirigida a usuarios administrativos.",
+          "- Responsable del desarrollo y mantenimiento de modulos y sistemas administrativos, incluyendo el calculo de liquidaciones, prestaciones sociales y el sistema de recursos humanos.\n- Proporcion de soporte tecnico en linea para los sistemas de informacion, resolviendo incidencias y asegurando la continuidad operativa.\n- Creacion de manuales de usuario, programacion y tecnicos para facilitar la adopcion y el uso eficiente de los sistemas.\n- Imparticion de capacitacion a usuarios administrativos, mejorando su capacidad para utilizar las herramientas de software de manera efectiva.",
         skills: [
           "Web Development",
           "Technical Documentation",
@@ -170,11 +151,12 @@ export const EXPERIENCES: Experience[] = [
         id: "1",
         title: "Universidad Mayor de San Andres (UMSA)",
         employmentPeriod: {
-          start: "11.2024",
+          start: "07.2018",
+          end: "07.2024",
         },
         icon: <GraduationCapIcon />,
         description:
-          "- Licenciatura en Ciencias de la Computacion, con mencion en Ingenieria de Sistemas.\n- Nivel Intermedio de Ingles (B1–B2) — CETI UMSA (2023–Presente).",
+          "- Licenciatura en Ciencias de la Computacion, con mencion en Ingenieria de Sistemas.\n- Nivel Intermedio de Ingles (B1–B2) — CETI UMSA (2024–Presente).",
         skills: [
           "Java",
           "Python",

@@ -15,7 +15,7 @@ type DotKey<T, Prefix extends string = ""> = {
       : never
 }[keyof T & string]
 
-type TranslationKey = DotKey<Messages>
+export type TranslationKey = DotKey<Messages>
 
 function getNestedValue(obj: Record<string, unknown>, path: string): string {
   const keys = path.split(".")

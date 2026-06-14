@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react"
-import { LinkIcon } from "lucide-react"
+import { LinkIcon } from "@animateicons/react/lucide"
 
 import { cn } from "@/lib/utils"
 import { CopyButton } from "@/components/copy-button"

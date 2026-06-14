@@ -1,7 +1,7 @@
 "use client"
 
 import { copyText } from "@/utils/copy"
-import { EllipsisIcon, LinkIcon, ShareIcon } from "lucide-react"
+import { EllipsisIcon, LinkIcon, ShareIcon } from "@animateicons/react/lucide"
 import { toast } from "sonner"
 
 import {

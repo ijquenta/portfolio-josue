@@ -6,6 +6,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 
 import type { NavItem } from "@/types/nav"
+import { useTranslation, type TranslationKey } from "@/lib/i18n/use-translation"
 import { useMediaQuery } from "@/hooks/use-media-query"
 import { Button } from "@/components/ui/button"
 import {
@@ -15,8 +16,16 @@ import {
 } from "@/components/ui/popover"
 import { haptic } from "@/registry/lib/haptic"
 
+const NAV_KEY_MAP: Record<string, TranslationKey> = {
+  "/": "nav.home",
+  "/#hello": "nav.about",
+  "/#experience": "nav.experience",
+  "/#projects": "nav.projects",
+}
+
 export function NavMobile({ items }: { items: NavItem<Route>[] }) {
   const [open, setOpen] = useState(false)
+  const { t } = useTranslation()
 
   const isDesktop = useMediaQuery("(min-width: 40rem)") // sm breakpoint
 
@@ -60,7 +69,7 @@ export function NavMobile({ items }: { items: NavItem<Route>[] }) {
                 className="rounded-lg px-3 py-1.5 text-base aria-[current=page]:bg-accent"
                 onClick={() => handleOpenChange(false)}
               >
-                {link.title}
+                {t(NAV_KEY_MAP[link.href])}
               </Link>
             )
           })}

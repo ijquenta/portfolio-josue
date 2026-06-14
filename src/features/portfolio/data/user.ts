@@ -3,39 +3,33 @@ import type { User } from "@/features/portfolio/types/user"
 export const USER: User = {
   firstName: "Ivan Josue",
   lastName: "Quenta Vargas",
-  displayName: "Ivan Josue Quenta Quenta",
+  displayName: "Ivan Josue Quenta Vargas",
   username: "ijquenta",
   gender: "male",
   pronouns: "he/him",
-  bio: "Full Stack Developer — Angular, Next.js, Spring Boot, Flutter",
+  bio: "Software Developer — Flutter, Angular, React, Node.js",
   flipSentences: [
+    "Software Developer",
     "Full Stack Developer",
-    "Innovation-driven",
     "Problem Solver",
   ],
   address: "La Paz, Bolivia",
   phoneNumberB64: "KzU5MTc2MjYxNjUz",
   emailB64: "aXZhbmpvc3VlcXVlbnRhdmFyZ2FzQGdtYWlsLmNvbQ==",
   website: "https://ijquenta.dev",
-  jobTitle: "Full Stack Developer",
+  jobTitle: "Software Developer",
   jobs: [
     {
-      title: "Full Stack Developer",
-      company: "Certivo",
-      website: "#",
-      experienceId: "certivo",
-    },
-    {
-      title: "Full Stack Developer",
-      company: "Bucle Venture",
+      title: "Junior Product Developer",
+      company: "Bucle Ventures",
       website: "#",
       experienceId: "bucle-venture",
     },
   ],
   about: `
-- Desarrollador Full Stack con trayectoria en startups, especializado en la creacion de soluciones escalables mediante Angular, Next.js, Spring Boot y Flutter.
-- Licenciado en Ciencias de la Computacion por la UMSA y ganador del primer lugar en la Hackathon Innovahack 2025.
-- Profesional orientado a la excelencia tecnica y la innovacion, con solida base academica y experiencia en metodologias agiles.
+- Ingeniero en Sistemas y Full-Stack Developer con experiencia en Flutter, Angular, React y Node.js.
+- He desarrollado sistemas administrativos, microservicios y aplicaciones moviles para instituciones gubernamentales y educativas.
+- Participante activo en hackathons y comunidades tech. Apasionado por crear soluciones tecnologicas innovadoras que generen impacto real.
 `,
   avatar:
     "https://media.licdn.com/dms/image/v2/D4E03AQFSbogGCwiBqQ/profile-displayphoto-shrink_400_400/B4EZT4ebEmHgAg-/0/1739335512921?e=1782950400&v=beta&t=SDZVYmBu_myuOgQvBmm2XSYQDsP3kNqXF2uFpetkJbM",

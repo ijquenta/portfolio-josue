@@ -18,7 +18,6 @@ export function TOC() {
           { title: "Hello", url: "#hello", depth: 2 },
           { title: "Components", url: "#components", depth: 2 },
           { title: "Blog", url: "#blog", depth: 2 },
-          { title: "Sponsors", url: "#sponsors", depth: 2 },
           { title: "Experience", url: "#experience", depth: 2 },
           { title: "Projects", url: "#projects", depth: 2 },
           { title: "Awards", url: "#awards", depth: 2 },

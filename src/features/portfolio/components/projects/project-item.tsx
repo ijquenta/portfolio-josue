@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { addQueryParams } from "@/utils/url"
-import { BoxIcon, InfinityIcon, LinkIcon } from "lucide-react"
+import { InfinityIcon } from "lucide-react"
+import { BoxIcon, LinkIcon } from "@animateicons/react/lucide"
 
 import { UTM_PARAMS } from "@/config/site"
 import { Tag } from "@/components/ui/tag"
