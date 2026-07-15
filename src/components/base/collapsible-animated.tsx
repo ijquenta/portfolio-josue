@@ -92,6 +92,4 @@ export {
   CollapsibleWithContext as Collapsible,
   CollapsibleChevronDownIcon,
   CollapsibleChevronsUpDownIcon,
-  useCollapsible,
-  useCollapsibleAnimation,
 }

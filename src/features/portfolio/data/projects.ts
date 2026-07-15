@@ -6,6 +6,7 @@ export const PROJECTS: Project[] = [
     title: "Innovahack 2025 — 1er Lugar",
     period: { start: "10.2025" },
     link: "#",
+    cover: "https://avatar.vercel.sh/innovahack",
     skills: ["React", "Node.js", "AI", "TypeScript"],
     description: [
       "**Contexto:** El Innovahack es la hackathon mas grande de Bolivia, organizada por la Universidad Mayor de San Andres. Equipos de todo el pais compiten durante 48 horas para resolver desafios tecnologicos con impacto social.",
@@ -27,7 +28,16 @@ export const PROJECTS: Project[] = [
     title: "Certivo — Certificacion Agricola con IA",
     period: { start: "07.2025", end: "12.2025" },
     link: "#",
-    skills: ["Next.js", "Flutter", "Node.js", "Express", "Firebase", "TypeScript", "Dart"],
+    cover: "https://avatar.vercel.sh/certivo",
+    skills: [
+      "Next.js",
+      "Flutter",
+      "Node.js",
+      "Express",
+      "Firebase",
+      "TypeScript",
+      "Dart",
+    ],
     description: [
       "**Contexto:** Certivo es una plataforma para la certificacion de parcelas de productores agricolas. Los inspectores de campo necesitaban una herramienta movil y web para realizar listas de verificacion, generar planes de accion correctivos y automatizar el proceso de certificacion.",
       "",
@@ -48,6 +58,7 @@ export const PROJECTS: Project[] = [
     title: "BeautyScan — Colorimetria Capilar con IA",
     period: { start: "03.2025" },
     link: "#",
+    cover: "https://avatar.vercel.sh/beautyscan",
     skills: ["Flutter", "Python", "AI/ML", "Computer Vision"],
     description: [
       "**Contexto:** BeautyScan es una aplicacion movil que permite a usuarios y profesionales de la belleza analizar el color del cabello mediante la camara del telefono y recibir sugerencias personalizadas generadas por IA.",
@@ -69,6 +80,7 @@ export const PROJECTS: Project[] = [
     title: "Navi — Busqueda Inteligente de Empleo en LinkedIn",
     period: { start: "02.2025" },
     link: "#",
+    cover: "https://avatar.vercel.sh/navi",
     skills: ["JavaScript", "Chrome Extension", "AI", "LLM", "Web Scraping"],
     description: [
       "**Contexto:** Navi es una extension de navegador que integra scraping de LinkedIn con IA generativa para ayudar a profesionales a encontrar ofertas de trabajo relevantes.",

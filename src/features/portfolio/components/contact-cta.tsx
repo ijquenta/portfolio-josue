@@ -1,10 +1,11 @@
 "use client"
 
-import { useTranslation } from "@/lib/i18n/use-translation"
 import { MailIcon } from "@animateicons/react/lucide"
 import { ArrowDownIcon } from "lucide-react"
-import { USER } from "@/features/portfolio/data/user"
+
+import { useTranslation } from "@/lib/i18n/use-translation"
 import { Button } from "@/components/base/ui/button"
+import { USER } from "@/features/portfolio/data/user"
 
 export function ContactCTA() {
   const { t } = useTranslation()
@@ -21,6 +22,7 @@ export function ContactCTA() {
       </p>
       <div className="flex items-center justify-center gap-3">
         <Button
+          nativeButton={false}
           render={
             <a href={`mailto:${email}`}>
               <MailIcon className="size-4" />
@@ -30,6 +32,7 @@ export function ContactCTA() {
         />
         <Button
           variant="secondary"
+          nativeButton={false}
           render={
             <a href="/cv.pdf" download>
               <ArrowDownIcon className="size-4" />

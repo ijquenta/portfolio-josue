@@ -20,6 +20,8 @@ export type Project = {
   description?: string
   /** Logo image URL (absolute or path under /public). */
   logo?: string
+  /** Cover image URL for card display. */
+  cover?: string
   /** Whether the project card is expanded by default in the UI. */
   isExpanded?: boolean
 }

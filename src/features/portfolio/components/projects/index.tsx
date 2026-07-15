@@ -1,4 +1,4 @@
-import { CollapsibleList } from "@/components/collapsible-list"
+import { getServerT } from "@/lib/i18n/server-t"
 import {
   Panel,
   PanelHeader,
@@ -7,9 +7,8 @@ import {
 } from "@/features/portfolio/components/panel"
 import { PanelTitleCopy } from "@/features/portfolio/components/panel-title-copy"
 import { PROJECTS } from "@/features/portfolio/data/projects"
-import { getServerT } from "@/lib/i18n/server-t"
 
-import { ProjectItem } from "./project-item"
+import { ProjectCard } from "./project-item"
 
 const ID = "projects"
 
@@ -25,11 +24,11 @@ export async function Projects() {
         </PanelTitle>
       </PanelHeader>
 
-      <CollapsibleList
-        items={PROJECTS}
-        max={4}
-        renderItem={(item) => <ProjectItem project={item} />}
-      />
+      <div className="grid gap-4 sm:grid-cols-2">
+        {PROJECTS.map((project) => (
+          <ProjectCard key={project.id} project={project} />
+        ))}
+      </div>
     </Panel>
   )
 }

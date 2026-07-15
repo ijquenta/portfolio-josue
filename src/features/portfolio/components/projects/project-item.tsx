@@ -1,29 +1,21 @@
-import Image from "next/image"
 import { addQueryParams } from "@/utils/url"
-import { InfinityIcon } from "lucide-react"
-import { BoxIcon, LinkIcon } from "@animateicons/react/lucide"
 
 import { UTM_PARAMS } from "@/config/site"
-import { Tag } from "@/components/ui/tag"
-import { Prose } from "@/components/ui/typography"
+import { cn } from "@/lib/utils"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 import {
-  Collapsible,
-  CollapsibleChevronsUpDownIcon,
-} from "@/components/base/collapsible-animated"
-import {
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/base/ui/collapsible"
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/base/ui/tooltip"
-import { Markdown } from "@/components/markdown"
+  Card,
+  CardAction,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 
 import type { Project } from "../../types/projects"
 
-export function ProjectItem({
+export function ProjectCard({
   className,
   project,
 }: {
@@ -32,101 +24,39 @@ export function ProjectItem({
 }) {
   const { start, end } = project.period
   const isOngoing = !end
-  const isSinglePeriod = end === start
 
   return (
-    <Collapsible className={className} defaultOpen={project.isExpanded}>
-      <div className="flex items-center hover:bg-accent-muted">
-        {project.logo ? (
-          <Image
-            src={project.logo}
-            alt={project.title}
-            width={32}
-            height={32}
-            quality={100}
-            className="mx-4 flex size-6 shrink-0 select-none"
-            unoptimized
-            aria-hidden
-          />
-        ) : (
-          <div className="mx-4 flex size-6 shrink-0 items-center justify-center rounded-lg border border-muted-foreground/15 bg-muted text-muted-foreground ring-1 ring-line ring-offset-1 ring-offset-background select-none">
-            <BoxIcon className="size-4" />
-          </div>
-        )}
-
-        <div className="flex-1 border-l border-dashed border-line">
-          <CollapsibleTrigger className="flex w-full items-center gap-2 p-4 pr-2 text-left">
-            <div className="flex-1">
-              <h3 className="mb-1 leading-snug font-medium text-balance">
-                {project.title}
-              </h3>
-
-              <dl className="text-sm text-muted-foreground">
-                <dt className="sr-only">Period</dt>
-                <dd className="flex items-center gap-0.5">
-                  <span>{start}</span>
-                  {!isSinglePeriod && (
-                    <>
-                      <span className="font-mono">—</span>
-                      {isOngoing ? (
-                        <InfinityIcon
-                          className="size-4.5 translate-y-[0.5px]"
-                          aria-label="Present"
-                        />
-                      ) : (
-                        <span>{end}</span>
-                      )}
-                    </>
-                  )}
-                </dd>
-              </dl>
-            </div>
-
-            <Tooltip>
-              <TooltipTrigger
-                render={
-                  <a
-                    className="relative flex size-6 shrink-0 items-center justify-center text-muted-foreground after:absolute after:-inset-2 hover:text-foreground"
-                    href={addQueryParams(project.link, UTM_PARAMS)}
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="Open Project Link"
-                  >
-                    <LinkIcon className="pointer-events-none size-4" />
-                  </a>
-                }
-              />
-              <TooltipContent>
-                <p>Open Project Link</p>
-              </TooltipContent>
-            </Tooltip>
-
-            <div className="shrink-0 text-muted-foreground [&_svg]:size-4">
-              <CollapsibleChevronsUpDownIcon duration={0.15} />
-            </div>
-          </CollapsibleTrigger>
-        </div>
-      </div>
-
-      <CollapsibleContent className="overflow-hidden">
-        <div className="space-y-4 border-t border-line p-4">
-          {project.description && (
-            <Prose>
-              <Markdown>{project.description}</Markdown>
-            </Prose>
-          )}
-
-          {project.skills.length > 0 && (
-            <ul className="flex flex-wrap gap-1.5">
-              {project.skills.map((skill, index) => (
-                <li key={index} className="flex">
-                  <Tag>{skill}</Tag>
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-      </CollapsibleContent>
-    </Collapsible>
+    <Card className={cn("relative w-full pt-0", className)}>
+      <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
+      <img
+        src={project.cover ?? "https://avatar.vercel.sh/placeholder"}
+        alt=""
+        className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
+      />
+      <CardHeader>
+        <CardAction>
+          <Badge variant="secondary">
+            {start}
+            {isOngoing ? " — Present" : end ? ` — ${end}` : ""}
+          </Badge>
+        </CardAction>
+        <CardTitle>{project.title}</CardTitle>
+        <CardDescription>
+          {project.skills.slice(0, 3).join(" · ")}
+          {project.skills.length > 3 && " · ..."}
+        </CardDescription>
+      </CardHeader>
+      <CardFooter>
+        <Button className="w-full" asChild>
+          <a
+            href={addQueryParams(project.link, UTM_PARAMS)}
+            target="_blank"
+            rel="noopener"
+          >
+            View Project
+          </a>
+        </Button>
+      </CardFooter>
+    </Card>
   )
 }

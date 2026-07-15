@@ -678,12 +678,6 @@ export function getIconForPackageManager(manager: string) {
   }
 }
 
-export function getIcon(name: string | undefined) {
-  if (!name || !(name in Icons)) return null
-  const Icon = Icons[name as keyof typeof Icons]
-  return <Icon />
-}
-
 type ComponentIconProps = React.ComponentProps<"svg"> & {
   variant?: string
 }

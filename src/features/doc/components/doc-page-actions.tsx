@@ -3,9 +3,9 @@
 "use client"
 
 import { useMemo, useRef, useState } from "react"
+import { ChevronDownIcon } from "@animateicons/react/lucide"
 import { useTiks } from "@rexa-developer/tiks/react"
 import { IconCheck, IconCopy, IconX } from "@tabler/icons-react"
-import { ChevronDownIcon } from "@animateicons/react/lucide"
 
 import type { CopyState } from "@/hooks/use-copy-to-clipboard"
 import { Button } from "@/components/ui/button"
@@ -21,7 +21,7 @@ import { CopyStateIcon } from "@/registry/components/copy-button"
 
 const cache = new Map<string, string>()
 
-export function LLMCopyButton({ markdownUrl }: { markdownUrl: string }) {
+function LLMCopyButton({ markdownUrl }: { markdownUrl: string }) {
   const [state, setState] = useState<CopyState>("idle")
   const [isCopying, setIsCopying] = useState(false)
   const operationRef = useRef(false)
@@ -98,7 +98,7 @@ Be ready to answer follow-up questions and help debug issues based on the docume
   return `Read ${url}, I want to ask questions about it.`
 }
 
-export function ViewOptions({
+function ViewOptions({
   markdownUrl,
   isComponent = false,
 }: {
