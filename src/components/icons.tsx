@@ -7,6 +7,7 @@ import {
   FileIcon,
   GalleryHorizontalEndIcon,
   LayoutGridIcon,
+  MailIcon,
   MoonStarIcon,
   MouseIcon,
   PaintbrushIcon,
@@ -239,6 +240,8 @@ export const Icons = {
       />
     </svg>
   ),
+
+  mail: (props: IconProps) => <MailIcon {...props} />,
 
   shadcn: (props: IconProps) => (
     <svg viewBox="0 0 256 256" aria-hidden {...props}>

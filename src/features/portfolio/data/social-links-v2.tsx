@@ -18,7 +18,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
   {
     name: "email",
-    icon: <Icons.github />,
+    icon: <Icons.mail />,
     title: "Email",
     handle: "ivanjosuequentavargas@gmail.com",
     href: "mailto:ivanjosuequentavargas@gmail.com",
