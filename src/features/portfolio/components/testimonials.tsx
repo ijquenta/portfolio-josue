@@ -126,7 +126,6 @@ function TestimonialItem({
   authorTagline,
   url,
   quote,
-  // isVerified,
 }: TestimonialType) {
   return (
     <Testimonial className="relative">
@@ -147,11 +146,6 @@ function TestimonialItem({
             <span className="absolute inset-0" aria-hidden />
             {authorName}
           </a>
-          {/* {isVerified && (
-            <TestimonialVerifiedBadge className="text-info">
-              <VerifiedIcon />
-            </TestimonialVerifiedBadge>
-          )} */}
         </TestimonialAuthorName>
         <TestimonialAuthorTagline>{authorTagline}</TestimonialAuthorTagline>
       </TestimonialAuthor>
