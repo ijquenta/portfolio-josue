@@ -2,7 +2,6 @@
 
 import React, { useCallback, useEffect, useMemo, useState } from "react"
 import { useRouter } from "@bprogress/next/app"
-import { useTiks } from "@rexa-developer/tiks/react"
 import {
   BookmarkIcon,
   BoxIcon,
@@ -202,8 +201,6 @@ export function CommandMenu({
     useState<CommandKind | null>(null)
 
   const [click] = useClickSound()
-
-  const { success: tiksSuccess } = useTiks()
 
   useHotkeys(
     "mod+k, slash",
