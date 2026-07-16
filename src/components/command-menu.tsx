@@ -22,7 +22,6 @@ import {
 } from "lucide-react"
 import { useTheme } from "next-themes"
 import { useHotkeys } from "react-hotkeys-hook"
-import { toast } from "sonner"
 
 import { trackEvent } from "@/lib/events"
 import { useClickSound } from "@/hooks/soundcn/use-click-sound"
