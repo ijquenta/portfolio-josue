@@ -13,7 +13,7 @@ export const SITE_INFO = {
 
 export const LICENSE = {
   name: "MIT License",
-  url: "https://github.com/ijquenta/portfolio-ivan/blob/main/LICENSE",
+  url: "https://github.com/ijquenta/portfolio-josue/blob/main/LICENSE",
 }
 
 export const META_THEME_COLORS = {
@@ -46,8 +46,9 @@ export const MOBILE_NAV: NavItem<Route>[] = [
 
 export const X_HANDLE = "@ijquenta"
 export const GITHUB_USERNAME = "ijquenta"
-export const SOURCE_CODE_GITHUB_REPO = "ijquenta/portfolio-ivan"
-export const SOURCE_CODE_GITHUB_URL = "https://github.com/ijquenta/portfolio-ivan"
+export const SOURCE_CODE_GITHUB_REPO = "ijquenta/portfolio-josue"
+export const SOURCE_CODE_GITHUB_URL =
+  "https://github.com/ijquenta/portfolio-josue"
 
 export const SPONSORSHIP_URL = ""
 
