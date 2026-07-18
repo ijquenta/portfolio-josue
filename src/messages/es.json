@@ -3,7 +3,7 @@
     "home": "Inicio",
     "components": "Componentes",
     "blocks": "Bloques",
-    "about": "Sobre mi",
+    "about": "Sobre mí",
     "experience": "Experiencia",
     "projects": "Proyectos",
     "testimonials": "Testimonios"
@@ -18,7 +18,7 @@
     "awards": "Premios",
     "certifications": "Certificaciones",
     "bookmarks": "Favoritos",
-    "insights": "Estadisticas",
+    "insights": "Estadísticas",
     "components": "Componentes",
     "blog": "Blog",
     "sponsors": "Patrocinadores",
@@ -31,30 +31,30 @@
     "allComponents": "Todos los Componentes",
     "allPosts": "Todos los Posts",
     "allSponsors": "Todos los Patrocinadores",
-    "showMore": "Mostrar mas",
+    "showMore": "Mostrar más",
     "showLess": "Mostrar menos",
     "sponsorMyWork": "Patrocinar mi Trabajo",
     "copyLink": "Copiar enlace",
     "shareOnX": "Compartir en X",
     "shareOnLinkedIn": "Compartir en LinkedIn",
     "otherApp": "Otra app",
-    "copyPage": "Copiar Pagina",
+    "copyPage": "Copiar Página",
     "viewAsMarkdown": "Ver como Markdown",
     "openInGitHub": "Abrir en GitHub",
     "openInChatGPT": "Abrir en ChatGPT",
     "openInClaude": "Abrir en Claude",
     "goHome": "Ir al Inicio",
-    "viewMoreTestimonials": "Ver mas testimonios",
+    "viewMoreTestimonials": "Ver más testimonios",
     "pronounceMyName": "Pronunciar mi nombre"
   },
   "label": {
-    "location": "Ubicacion",
+    "location": "Ubicación",
     "website": "Sitio web",
     "pronouns": "Pronombres",
-    "uniqueVisitors": "Visitantes Unicos",
+    "uniqueVisitors": "Visitantes Únicos",
     "sessions": "Sesiones",
     "views": "Vistas",
-    "noInsights": "Sin estadisticas disponibles.",
+    "noInsights": "Sin estadísticas disponibles.",
     "noPosts": "No se encontraron publicaciones.",
     "new": "Nuevo",
     "updated": "Actualizado",
@@ -67,19 +67,19 @@
     "status": "Estado",
     "fullTime": "Tiempo completo",
     "partTime": "Medio tiempo",
-    "internship": "Pasantia",
+    "internship": "Pasantía",
     "freelance": "Freelance",
     "contract": "Contrato"
   },
   "status": {
     "linkCopied": "Enlace copiado",
-    "sponsorDescription": "Agradecido con los patrocinadores que hacen posible este trabajo de codigo abierto.",
-    "notFoundTitle": "Pagina no encontrada",
-    "notFoundDescription": "La pagina que buscas no existe o ha sido movida."
+    "sponsorDescription": "Agradecido con los patrocinadores que hacen posible este trabajo de código abierto.",
+    "notFoundTitle": "Página no encontrada",
+    "notFoundDescription": "La página que buscas no existe o ha sido movida."
   },
   "cta": {
     "title": "Abierto a oportunidades",
-    "description": "Si tienes un proyecto interesante o simplemente quieres conectar, escribeme.",
+    "description": "Si tienes un proyecto interesante o simplemente quieres conectar, escríbeme.",
     "sendEmail": "Enviar correo",
     "downloadCV": "Descargar CV"
   },
@@ -87,10 +87,10 @@
     "craftedWith": "HECHO CON CUIDADO POR JQ"
   },
   "profile": {
-    "pronouns": "el"
+    "pronouns": "él"
   },
   "experience": {
-    "education": "Educacion",
+    "education": "Educación",
     "present": "Presente",
     "employmentPeriod": "Periodo de Empleo"
   }
