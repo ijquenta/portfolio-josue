@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
-import type { ProfilePage as PageSchema, WithContext } from "schema-dts"
+import type { ProfilePage as PageSchema, Person, WithContext } from "schema-dts"
 
+import { SITE_INFO } from "@/config/site"
 import { JsonLdScript } from "@/lib/json-ld"
 import { cn } from "@/lib/utils"
 import { About } from "@/features/portfolio/components/about"
@@ -54,17 +55,33 @@ export default function HomePage() {
 }
 
 function getPageJsonLd(): WithContext<PageSchema> {
+  const sameAs = [
+    "https://github.com/ijquenta",
+    "https://linkedin.com/in/ijquenta",
+  ]
+
+  const person: WithContext<Person> = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: USER.displayName,
+    givenName: USER.firstName,
+    familyName: USER.lastName,
+    alternateName: USER.username,
+    identifier: USER.username,
+    image: USER.avatar,
+    url: SITE_INFO.url,
+    jobTitle: USER.jobTitle,
+    description: USER.bio,
+    address: { "@type": "PostalAddress", addressLocality: USER.address },
+    sameAs,
+  }
+
   return {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
     dateCreated: new Date(USER.dateCreated).toISOString(),
     dateModified: new Date().toISOString(),
-    mainEntity: {
-      "@type": "Person",
-      name: USER.displayName,
-      identifier: USER.username,
-      image: USER.avatar,
-    },
+    mainEntity: person,
   }
 }
 
@@ -77,7 +94,6 @@ function Separator({ className }: { className?: string }) {
         "before:bg-[repeating-linear-gradient(315deg,var(--pattern-foreground)_0,var(--pattern-foreground)_1px,transparent_0,transparent_50%)] before:bg-size-[10px_10px] before:[--pattern-foreground:var(--color-line)]/56",
         className
       )}
-    >
-    </div>
+    ></div>
   )
 }
