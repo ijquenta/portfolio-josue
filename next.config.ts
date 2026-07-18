@@ -13,6 +13,16 @@ const nextConfig: NextConfig = {
         hostname: "images.unsplash.com",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "media.licdn.com",
+        port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "avatar.vercel.sh",
+        port: "",
+      },
     ],
     qualities: [75, 100],
   },
@@ -24,6 +34,27 @@ const nextConfig: NextConfig = {
           },
         }
       : undefined,
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "X-Frame-Options",
+            value: "DENY",
+          },
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff",
+          },
+          {
+            key: "Referrer-Policy",
+            value: "strict-origin-when-cross-origin",
+          },
+        ],
+      },
+    ]
+  },
   async redirects() {
     return [
       {
@@ -54,7 +85,6 @@ const nextConfig: NextConfig = {
         source: "/rss",
         destination: "/blog/rss",
       },
-
     ]
   },
 }
