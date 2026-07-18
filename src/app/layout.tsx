@@ -1,17 +1,17 @@
 import "@/styles/globals.css"
 
 import type { Metadata, Viewport } from "next"
+import { cookies } from "next/headers"
 import Script from "next/script"
 import { NuqsAdapter } from "nuqs/adapters/next/app"
 import type { WebSite, WithContext } from "schema-dts"
 
-import { cookies } from "next/headers"
 import { META_THEME_COLORS, SITE_INFO, X_HANDLE } from "@/config/site"
+import { fontVariables } from "@/lib/fonts"
 import type { Locale } from "@/lib/i18n/config"
 import { defaultLocale } from "@/lib/i18n/config"
-import { LocaleProvider } from "@/components/locale-provider"
-import { fontVariables } from "@/lib/fonts"
 import { JsonLdScript } from "@/lib/json-ld"
+import { LocaleProvider } from "@/components/locale-provider"
 import { Providers } from "@/components/providers"
 import { USER } from "@/features/portfolio/data/user"
 
@@ -55,18 +55,24 @@ export const metadata: Metadata = {
     },
   ],
   creator: USER.displayName,
+  alternates: {
+    languages: {
+      en: `${SITE_INFO.url}/en`,
+      es: `${SITE_INFO.url}/es`,
+    },
+  },
   openGraph: {
     siteName: SITE_INFO.name,
-    url: "/",
+    url: SITE_INFO.url,
     type: "profile",
-    locale: "en_US",
+    locale: "es_BO",
     firstName: USER.firstName,
     lastName: USER.lastName,
     username: USER.username,
     gender: USER.gender,
     images: [
       {
-        url: SITE_INFO.ogImage,
+        url: `/og/simple?title=${encodeURIComponent(`${USER.displayName} – ${USER.jobTitle}`)}&description=${encodeURIComponent(SITE_INFO.description)}`,
         width: 1200,
         height: 630,
         alt: SITE_INFO.name,
@@ -77,32 +83,25 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: X_HANDLE,
     creator: X_HANDLE,
-    images: [SITE_INFO.ogImage],
+    images: [
+      `/og/simple?title=${encodeURIComponent(`${USER.displayName} – ${USER.jobTitle}`)}&description=${encodeURIComponent(SITE_INFO.description)}`,
+    ],
   },
   icons: {
     icon: [
       {
-        url: "https://assets.chanhdai.com/images/favicon.ico",
-        sizes: "32x32",
-      },
-      {
-        url: "https://assets.chanhdai.com/images/favicon.svg",
+        url: "/favicon.svg",
         sizes: "any",
         type: "image/svg+xml",
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: "https://assets.chanhdai.com/images/favicon-dark.svg",
+        url: "/favicon-dark.svg",
         sizes: "any",
         type: "image/svg+xml",
         media: "(prefers-color-scheme: dark)",
       },
     ],
-    apple: {
-      url: "https://assets.chanhdai.com/images/apple-touch-icon.png",
-      type: "image/png",
-      sizes: "180x180",
-    },
   },
 }
 
