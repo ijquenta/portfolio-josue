@@ -2,7 +2,6 @@ import "@/styles/globals.css"
 
 import type { Metadata, Viewport } from "next"
 import { cookies } from "next/headers"
-import Script from "next/script"
 import { NuqsAdapter } from "nuqs/adapters/next/app"
 import type { WebSite, WithContext } from "schema-dts"
 
@@ -127,14 +126,13 @@ export default async function RootLayout({
       </head>
 
       <body>
-        <Script
+        <script
           id="dark-mode-script"
-          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: darkModeScript }}
+          suppressHydrationWarning
         />
-        <Script
+        <script
           id="avatar-lights-script"
-          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               try {
@@ -143,6 +141,7 @@ export default async function RootLayout({
               } catch(_) {}
             `,
           }}
+          suppressHydrationWarning
         />
         <LocaleProvider initialLocale={locale}>
           <Providers>
